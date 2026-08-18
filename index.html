@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Form Pendaftaran Pelatihan 27–28 Agustus 2026">
+
+    <title>
+        Pendaftaran Pelatihan 27–28 Agustus 2026
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef2ff 0%,
+                    #f8fafc 45%,
+                    #e0f2fe 100%
+                );
+
+            color: #111827;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 25px 15px;
+
+        }
+
+
+        .page {
+
+            width: 100%;
+
+            max-width: 540px;
+
+        }
+
+
+        /* =========================================
+           CARD
+        ========================================= */
+
+        .card {
+
+            width: 100%;
+
+            background: rgba(255,255,255,.97);
+
+            border-radius: 24px;
+
+            padding: 32px;
+
+            box-shadow:
+                0 25px 70px rgba(15,23,42,.15);
+
+            border:
+                1px solid rgba(255,255,255,.8);
+
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .logo-wrapper {
+
+            width: 100px;
+
+            height: 100px;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #ffffff;
+
+            border-radius: 22px;
+
+            padding: 10px;
+
+            box-shadow:
+                0 10px 30px rgba(15,23,42,.10);
+
+        }
+
+
+        .logo {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            border-radius: 12px;
+
+        }
+
+
+        .title {
+
+            margin: 0;
+
+            font-size: 25px;
+
+            line-height: 1.3;
+
+            font-weight: 800;
+
+            color: #111827;
+
+        }
+
+
+        .subtitle {
+
+            margin-top: 8px;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            color: #64748b;
+
+        }
+
+
+        /* =========================================
+           EVENT INFO
+        ========================================= */
+
+        .event-box {
+
+            margin-top: 24px;
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fafc,
+                    #eef2ff
+                );
+
+            border:
+                1px solid #e2e8f0;
+
+        }
+
+
+        .event-title {
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+
+            color: #1e293b;
+
+        }
+
+
+        .event-item {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin: 8px 0;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            color: #475569;
+
+        }
+
+
+        .event-icon {
+
+            width: 22px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .event-item strong {
+
+            color: #1e293b;
+
+        }
+
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        .form {
+
+            margin-top: 25px;
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .form-label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #334155;
+
+        }
+
+
+        .required {
+
+            color: #dc2626;
+
+        }
+
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+
+            width: 100%;
+
+            height: 52px;
+
+            padding: 0 15px;
+
+            border:
+                1px solid #cbd5e1;
+
+            border-radius: 12px;
+
+            background: #ffffff;
+
+            color: #111827;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition:
+                border-color .2s,
+                box-shadow .2s,
+                background .2s;
+
+        }
+
+
+        input:focus {
+
+            border-color: #4f46e5;
+
+            box-shadow:
+                0 0 0 4px
+                rgba(79,70,229,.10);
+
+        }
+
+
+        input::placeholder {
+
+            color: #94a3b8;
+
+        }
+
+
+        /* =========================================
+           ATTENDANCE
+        ========================================= */
+
+        .attendance-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+
+        }
+
+
+        .attendance-option {
+
+            position: relative;
+
+        }
+
+
+        .attendance-option input {
+
+            position: absolute;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+        }
+
+
+        .attendance-label {
+
+            min-height: 54px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            padding: 10px;
+
+            border:
+                1px solid #cbd5e1;
+
+            border-radius: 12px;
+
+            background: #ffffff;
+
+            color: #475569;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                all .2s ease;
+
+        }
+
+
+        .attendance-label:hover {
+
+            border-color: #818cf8;
+
+            background: #f8fafc;
+
+        }
+
+
+        .attendance-option
+        input:checked
+        + .attendance-label {
+
+            background: #111827;
+
+            color: #ffffff;
+
+            border-color: #111827;
+
+            box-shadow:
+                0 6px 18px
+                rgba(15,23,42,.18);
+
+        }
+
+
+        /* =========================================
+           NOTE
+        ========================================= */
+
+        .note {
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background: #fff7ed;
+
+            border:
+                1px solid #fed7aa;
+
+            color: #9a3412;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .note strong {
+
+            color: #7c2d12;
+
+        }
+
+
+        /* =========================================
+           BUTTON
+        ========================================= */
+
+        .submit-button {
+
+            width: 100%;
+
+            height: 54px;
+
+            margin-top: 20px;
+
+            border: 0;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #1e293b
+                );
+
+            color: #ffffff;
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px
+                rgba(15,23,42,.18);
+
+            transition:
+                transform .15s,
+                box-shadow .15s,
+                opacity .15s;
+
+        }
+
+
+        .submit-button:hover {
+
+            transform:
+                translateY(-1px);
+
+            box-shadow:
+                0 14px 30px
+                rgba(15,23,42,.22);
+
+        }
+
+
+        .submit-button:active {
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        .submit-button:disabled {
+
+            opacity: .65;
+
+            cursor: not-allowed;
+
+            transform: none;
+
+        }
+
+
+        /* =========================================
+           LOADING
+        ========================================= */
+
+        .button-loading {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+        }
+
+
+        .spinner {
+
+            width: 18px;
+
+            height: 18px;
+
+            border:
+                2px solid
+                rgba(255,255,255,.35);
+
+            border-top-color:
+                #ffffff;
+
+            border-radius: 50%;
+
+            animation:
+                spin .7s linear infinite;
+
+        }
+
+
+        @keyframes spin {
+
+            to {
+                transform:
+                    rotate(360deg);
+            }
+
+        }
+
+
+        /* =========================================
+           STATUS
+        ========================================= */
+
+        .status {
+
+            display: none;
+
+            margin-top: 18px;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .status.show {
+
+            display: block;
+
+        }
+
+
+        .status.success {
+
+            background: #ecfdf5;
+
+            border:
+                1px solid #a7f3d0;
+
+            color: #065f46;
+
+        }
+
+
+        .status.error {
+
+            background: #fef2f2;
+
+            border:
+                1px solid #fecaca;
+
+            color: #991b1b;
+
+        }
+
+
+        .status.warning {
+
+            background: #fffbeb;
+
+            border:
+                1px solid #fde68a;
+
+            color: #92400e;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 18px;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+
+            color: #94a3b8;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (
+            max-width: 480px
+        ) {
+
+            body {
+
+                padding:
+                    15px 10px;
+
+                align-items:
+                    flex-start;
+
+            }
+
+
+            .page {
+
+                margin-top: 10px;
+
+            }
+
+
+            .card {
+
+                padding: 23px 19px;
+
+                border-radius: 20px;
+
+            }
+
+
+            .logo-wrapper {
+
+                width: 85px;
+
+                height: 85px;
+
+            }
+
+
+            .title {
+
+                font-size: 21px;
+
+            }
+
+
+            .subtitle {
+
+                font-size: 13px;
+
+            }
+
+
+            .attendance-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .event-box {
+
+                padding: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <div class="card">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <div class="header">
+
+
+            <div class="logo-wrapper">
+
+                <img
+                    class="logo"
+                    src="https://i.imgur.com/JkxRYd6.png"
+                    alt="Logo">
+
+
+            </div>
+
+
+            <h1 class="title">
+
+                Form Pendaftaran
+                Pelatihan
+
+            </h1>
+
+
+            <div class="subtitle">
+
+                Silakan lengkapi data
+                kehadiran Anda.
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================================
+             EVENT INFORMATION
+        ====================================== -->
+
+        <div class="event-box">
+
+
+            <div class="event-title">
+
+                📚 Informasi Pelatihan
+
+            </div>
+
+
+            <div class="event-item">
+
+                <div class="event-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <strong>
+                        Tanggal
+                    </strong>
+
+                    <br>
+
+                    Kamis–Jumat,
+                    27–28 Agustus 2026
+
+                </div>
+
+            </div>
+
+
+            <div class="event-item">
+
+                <div class="event-icon">
+                    ⏰
+                </div>
+
+                <div>
+
+                    <strong>
+                        Waktu
+                    </strong>
+
+                    <br>
+
+                    08.00–17.00 WIB
+
+                </div>
+
+            </div>
+
+
+            <div class="event-item">
+
+                <div class="event-icon">
+                    💻
+                </div>
+
+                <div>
+
+                    <strong>
+                        Perlengkapan
+                    </strong>
+
+                    <br>
+
+                    Membawa laptop
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================================
+             FORM
+        ====================================== -->
+
+        <form
+            id="registrationForm"
+            class="form"
+            novalidate>
+
+
+            <!-- NAMA -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="nama">
+
+                    Nama Lengkap
+                    <span class="required">
+                        *
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Masukkan nama lengkap"
+                    autocomplete="name"
+                    maxlength="100"
+                    required>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="email">
+
+                    Email
+                    <span class="required">
+                        *
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="nama@email.com"
+                    autocomplete="email"
+                    maxlength="150"
+                    required>
+
+            </div>
+
+
+
+            <!-- WHATSAPP -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="whatsapp">
+
+                    No. WhatsApp
+                    <span class="required">
+                        *
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    placeholder="08xxxxxxxxxx"
+                    autocomplete="tel"
+                    maxlength="20"
+                    inputmode="tel"
+                    required>
+
+
+            </div>
+
+
+
+            <!-- KEHADIRAN -->
+
+            <div class="form-group">
+
+                <label class="form-label">
+
+                    Pilihan Kehadiran
+                    <span class="required">
+                        *
+                    </span>
+
+                </label>
+
+
+                <div class="attendance-grid">
+
+
+                    <div
+                        class="attendance-option">
+
+
+                        <input
+                            type="radio"
+                            id="hadir"
+                            name="kehadiran"
+                            value="Hadir">
+
+
+                        <label
+                            class="attendance-label"
+                            for="hadir">
+
+                            <span>
+                                ✅
+                            </span>
+
+                            Hadir
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="attendance-option">
+
+
+                        <input
+                            type="radio"
+                            id="tidakHadir"
+                            name="kehadiran"
+                            value="Tidak Hadir">
+
+
+                        <label
+                            class="attendance-label"
+                            for="tidakHadir">
+
+                            <span>
+                                ❌
+                            </span>
+
+                            Tidak Hadir
+
+                        </label>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NOTE -->
+
+            <div class="note">
+
+                <strong>
+                    💻 NB:
+                </strong>
+
+                Peserta yang hadir
+                diharapkan membawa
+                laptop masing-masing.
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                id="submitButton"
+                class="submit-button">
+
+                Daftar Sekarang
+
+            </button>
+
+
+
+            <!-- STATUS -->
+
+            <div
+                id="status"
+                class="status"
+                role="alert">
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        Pendaftaran Pelatihan
+        <br>
+
+        27–28 Agustus 2026
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+/**
+ * ==========================================================
+ * KONFIGURASI API
+ * ==========================================================
+ *
+ * GANTI URL DI BAWAH INI DENGAN
+ * URL WEB APP GOOGLE APPS SCRIPT
+ *
+ */
+
+const API_URL =
+    'PASTE_URL_WEB_APP_APPS_SCRIPT_DI_SINI';
+
+
+
+/**
+ * ==========================================================
+ * ELEMENT
+ * ==========================================================
+ */
+
+const form =
+    document.getElementById(
+        'registrationForm'
+    );
+
+
+const submitButton =
+    document.getElementById(
+        'submitButton'
+    );
+
+
+const statusBox =
+    document.getElementById(
+        'status'
+    );
+
+
+
+/**
+ * ==========================================================
+ * BASE64 UTF-8
+ * ==========================================================
+ *
+ * Mengubah object JSON menjadi Base64.
+ *
+ */
+
+function encodeBase64(data) {
+
+    const json =
+        JSON.stringify(
+            data
+        );
+
+
+    const bytes =
+        new TextEncoder()
+            .encode(
+                json
+            );
+
+
+    let binary =
+        '';
+
+
+    bytes.forEach(
+        function(byte) {
+
+            binary +=
+                String.fromCharCode(
+                    byte
+                );
+
+        }
+    );
+
+
+    return btoa(
+        binary
+    );
+
+}
+
+
+
+/**
+ * ==========================================================
+ * NORMALISASI WHATSAPP FRONTEND
+ * ==========================================================
+ */
+
+function normalizeWhatsApp(
+    number
+) {
+
+    if (!number) {
+
+        return '';
+
+    }
+
+
+    let phone =
+        String(number)
+            .trim()
+            .replace(
+                /[^\d+]/g,
+                ''
+            );
+
+
+    if (
+        phone.startsWith('+62')
+    ) {
+
+        phone =
+            '62' +
+            phone.substring(3);
+
+    }
+
+    else if (
+        phone.startsWith('0062')
+    ) {
+
+        phone =
+            '62' +
+            phone.substring(4);
+
+    }
+
+    else if (
+        phone.startsWith('08')
+    ) {
+
+        phone =
+            '62' +
+            phone.substring(1);
+
+    }
+
+    else if (
+        phone.startsWith('8')
+    ) {
+
+        phone =
+            '62' +
+            phone;
+
+    }
+
+
+    return phone;
+
+}
+
+
+
+/**
+ * ==========================================================
+ * VALIDASI EMAIL
+ * ==========================================================
+ */
+
+function isValidEmail(
+    email
+) {
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        .test(
+            email
+        );
+
+}
+
+
+
+/**
+ * ==========================================================
+ * VALIDASI WHATSAPP
+ * ==========================================================
+ */
+
+function isValidWhatsApp(
+    number
+) {
+
+    const phone =
+        normalizeWhatsApp(
+            number
+        );
+
+
+    return /^628\d{7,13}$/
+        .test(
+            phone
+        );
+
+}
+
+
+
+/**
+ * ==========================================================
+ * STATUS
+ * ==========================================================
+ */
+
+function showStatus(
+    type,
+    message
+) {
+
+    statusBox.className =
+        'status show ' +
+        type;
+
+
+    statusBox.textContent =
+        message;
+
+
+    statusBox.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest'
+    });
+
+}
+
+
+
+/**
+ * ==========================================================
+ * LOADING
+ * ==========================================================
+ */
+
+function setLoading(
+    loading
+) {
+
+    submitButton.disabled =
+        loading;
+
+
+    if (loading) {
+
+        submitButton.innerHTML = `
+
+            <span class="button-loading">
+
+                <span class="spinner"></span>
+
+                Mengirim data...
+
+            </span>
+
+        `;
+
+    }
+
+    else {
+
+        submitButton.textContent =
+            'Daftar Sekarang';
+
+    }
+
+}
+
+
+
+/**
+ * ==========================================================
+ * SUBMIT FORM
+ * ==========================================================
+ */
+
+form.addEventListener(
+    'submit',
+    async function(event) {
+
+        event.preventDefault();
+
+
+        // ================================================
+        // AMBIL DATA
+        // ================================================
+
+        const nama =
+            document
+                .getElementById('nama')
+                .value
+                .trim();
+
+
+        const email =
+            document
+                .getElementById('email')
+                .value
+                .trim()
+                .toLowerCase();
+
+
+        const whatsappInput =
+            document
+                .getElementById('whatsapp')
+                .value
+                .trim();
+
+
+        const whatsapp =
+            normalizeWhatsApp(
+                whatsappInput
+            );
+
+
+        const kehadiranElement =
+            document.querySelector(
+                'input[name="kehadiran"]:checked'
+            );
+
+
+        const kehadiran =
+            kehadiranElement
+                ? kehadiranElement.value
+                : '';
+
+
+
+        // ================================================
+        // VALIDASI NAMA
+        // ================================================
+
+        if (!nama) {
+
+            showStatus(
+                'error',
+                '❌ Nama lengkap wajib diisi.'
+            );
+
+            document
+                .getElementById('nama')
+                .focus();
+
+            return;
+
+        }
+
+
+        if (
+            nama.length < 2
+        ) {
+
+            showStatus(
+                'error',
+                '❌ Nama minimal 2 karakter.'
+            );
+
+            return;
+
+        }
+
+
+
+        // ================================================
+        // VALIDASI EMAIL
+        // ================================================
+
+        if (!email) {
+
+            showStatus(
+                'error',
+                '❌ Email wajib diisi.'
+            );
+
+            document
+                .getElementById('email')
+                .focus();
+
+            return;
+
+        }
+
+
+        if (
+            !isValidEmail(
+                email
+            )
+        ) {
+
+            showStatus(
+                'error',
+                '❌ Format email tidak valid.'
+            );
+
+            document
+                .getElementById('email')
+                .focus();
+
+            return;
+
+        }
+
+
+
+        // ================================================
+        // VALIDASI WHATSAPP
+        // ================================================
+
+        if (!whatsappInput) {
+
+            showStatus(
+                'error',
+                '❌ Nomor WhatsApp wajib diisi.'
+            );
+
+            document
+                .getElementById('whatsapp')
+                .focus();
+
+            return;
+
+        }
+
+
+        if (
+            !isValidWhatsApp(
+                whatsapp
+            )
+        ) {
+
+            showStatus(
+                'error',
+                '❌ Nomor WhatsApp tidak valid. ' +
+                'Gunakan nomor Indonesia yang aktif.'
+            );
+
+            document
+                .getElementById('whatsapp')
+                .focus();
+
+            return;
+
+        }
+
+
+
+        // ================================================
+        // VALIDASI KEHADIRAN
+        // ================================================
+
+        if (!kehadiran) {
+
+            showStatus(
+                'error',
+                '❌ Silakan pilih Hadir atau Tidak Hadir.'
+            );
+
+            return;
+
+        }
+
+
+
+        // ================================================
+        // CEK API URL
+        // ================================================
+
+        if (
+            !API_URL ||
+            API_URL.includes(
+                'https://script.google.com/macros/s/AKfycbwvwXzbTDQXRhDTwV-Owx_CxkWu0Y_EuV5IZmyaxMtAcAautDys2qOfE0joUi1X3yb_vg/exec'
+            )
+        ) {
+
+            showStatus(
+                'error',
+                '❌ URL Google Apps Script belum dikonfigurasi.'
+            );
+
+            return;
+
+        }
+
+
+
+        // ================================================
+        // PAYLOAD
+        // ================================================
+
+        const payload = {
+
+            nama:
+                nama,
+
+            email:
+                email,
+
+            whatsapp:
+                whatsapp,
+
+            kehadiran:
+                kehadiran
+
+        };
+
+
+
+        // ================================================
+        // BASE64
+        // ================================================
+
+        const encodedData =
+            encodeBase64(
+                payload
+            );
+
+
+
+        // ================================================
+        // LOADING
+        // ================================================
+
+        setLoading(
+            true
+        );
+
+
+        statusBox.className =
+            'status';
+
+
+        try {
+
+
+            // ============================================
+            // REQUEST
+            // ============================================
+
+            const response =
+                await fetch(
+                    API_URL,
+                    {
+
+                        method:
+                            'POST',
+
+                        headers: {
+
+                            'Content-Type':
+                                'text/plain;charset=utf-8'
+
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                data:
+                                    encodedData
+
+                            })
+
+                    }
+                );
+
+
+
+            // ============================================
+            // RESPONSE
+            // ============================================
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'HTTP ' +
+                    response.status
+                );
+
+            }
+
+
+            const result =
+                await response.json();
+
+
+
+            // ============================================
+            // SUCCESS
+            // ============================================
+
+            if (
+                result.success
+            ) {
+
+                showStatus(
+                    'success',
+                    '✅ Pendaftaran berhasil! ' +
+                    'Data Anda telah tersimpan.'
+                );
+
+
+                form.reset();
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+
+            }
+
+
+
+            // ============================================
+            // DUPLIKAT EMAIL
+            // ============================================
+
+            else if (
+                result.duplicate &&
+                result.field === 'email'
+            ) {
+
+                showStatus(
+                    'warning',
+                    '⚠️ Email tersebut sudah terdaftar. ' +
+                    'Satu email hanya dapat digunakan satu kali.'
+                );
+
+
+                document
+                    .getElementById('email')
+                    .focus();
+
+            }
+
+
+
+            // ============================================
+            // DUPLIKAT WHATSAPP
+            // ============================================
+
+            else if (
+                result.duplicate &&
+                result.field === 'whatsapp'
+            ) {
+
+                showStatus(
+                    'warning',
+                    '⚠️ Nomor WhatsApp tersebut sudah terdaftar. ' +
+                    'Satu nomor WhatsApp hanya dapat digunakan satu kali.'
+                );
+
+
+                document
+                    .getElementById('whatsapp')
+                    .focus();
+
+            }
+
+
+
+            // ============================================
+            // ERROR SERVER
+            // ============================================
+
+            else {
+
+                showStatus(
+                    'error',
+                    '❌ ' +
+                    (
+                        result.message ||
+                        'Pendaftaran gagal.'
+                    )
+                );
+
+            }
+
+
+        }
+
+        catch (error) {
+
+            console.error(
+                'Submit error:',
+                error
+            );
+
+
+            showStatus(
+                'error',
+                '❌ Tidak dapat terhubung ke server. ' +
+                'Periksa koneksi internet atau konfigurasi API.'
+            );
+
+        }
+
+        finally {
+
+            setLoading(
+                false
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
